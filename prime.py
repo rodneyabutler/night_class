@@ -12,3 +12,5 @@ while (count < 101):
     else:
         print count
         count = count + 1
+
+#write a projet for 'a number' what are the prime numbers between 1 and the number.

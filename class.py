@@ -1,7 +1,7 @@
-
+import random
 
 class Player():
-    def __init__(self, name, chest, persona, guile):
+    def __init__(self, name, chest, persona, guile): #self.name is also used by the audience class
         self.name = name
         self.chest = chest
         self.persona = persona
@@ -14,17 +14,47 @@ class Player():
         print '-'*50
 
 class Audience():
-    def __init__(self, type, size, fervor, intellect):
-        self.type = type
+    def __init__(self, name, size, fervor, intellect):
+        self.name = name
         self.size = size
         self.fervor = fervor
         self.intellect = intellect
+#I need a variable to group all of the groups. Can I make a list of variables?
 
 
-    def description(self):
-        print "You, Politician, must face a(n) {} audience and here are their stats: \nType: {}\nSize: {}\nIntellect: {}".format(self.type, self.size, self.fervor, self.intellect)
-        print '-'*50
-        print '-'*50
+def nra():
+    aud.name = "NRA gun enthusiasts"
+    aud.size = 1
+    aud.fervor = 2
+    aud.intellect = 3
+
+def choice():
+    aud.name = "Pro Choicers"
+    aud.size = 4
+    aud.fervor = 5
+    aud.intellect = 6
+
+def union():
+    aud.name = "Union Members"
+    aud.size = 7
+    aud.fervor = 8
+    aud.intellect = 9
+
+def geriatrics():
+    aud.name = "Old Folks"
+    aud.size = 10
+    aud.fervor = 11
+    aud.intellect = 12
+#These are the variables for the audience but they run tooo early.
+#aud_name = raw_input("You have encountered a crowd of *what ever  aud group:")
+#aud = Audience(aud_name, 50, 50, 50)
+#aud.description
+
+
+def description(aud):
+    print "You, Politician, must face a(n) audience of {} and here are their stats: \nSize: {}\nFervor: {}\nIntellect: {}".format(aud.type, aud.size, aud.fervor, aud.intellect)
+    print '-'*50
+    print '-'*50
 
 
 def current_stats():
@@ -55,14 +85,6 @@ print '-'*50
 char_name = raw_input("What is your politicians name?:")
 char = Player(char_name, 50, 50, 50)
 char.description()
-
-#gunrights = ("")
-#prochoice
-#unions
-#geriatrics
-
-
-
 
 
 def begin():
